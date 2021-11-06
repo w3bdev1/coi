@@ -24,9 +24,16 @@ const scrapeData = async () => {
 		const articleContent = $(".description-wrapper p")
 		const clauseArray=[]
 
-		articleContent.each((_, el) => {
+		articleContent.each((id, el) => {
 			const content = el.children
-			clauseArray.push(content[content.length - 1].data.trim())
+			const clause = content[content.length - 1].data.trim()
+			if(clause != '') {
+				// Add separator before new clause
+				if (id > 0 && !!clause.match(/^\(\d+\)/)) {
+					clauseArray.push('------')
+				}
+				clauseArray.push(clause)
+			}
 		})
 
 		console.clear()

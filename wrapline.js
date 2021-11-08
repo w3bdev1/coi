@@ -15,7 +15,7 @@ const wrapline = (text, maxWidth = process.stdout.columns) => {
 
 	// Slice wrt last space within maxwidth
 	const slicedTextTillLastSpaceInMaxWidthText = text.substr(0,indexOfLastSpaceInMaxWidthText)
-	const restOfSlicedText = text.substr(indexOfLastSpaceInMaxWidthText)
+	const restOfSlicedText = '   ' + text.substr(indexOfLastSpaceInMaxWidthText)
 
 	newTextArray.push(slicedTextTillLastSpaceInMaxWidthText)
 	return wrapline(restOfSlicedText, maxWidth)

@@ -2,6 +2,7 @@
 
 const axios = require("axios");
 const cheerio = require("cheerio");
+const wrapline = require('./wrapline')
 
 const readline = require('readline').createInterface({
 	input: process.stdin,
@@ -30,7 +31,7 @@ const scrapeData = async (url, articleNumber) => {
 				if (id > 0 && !!clause.match(/^\(\d+\)/)) {
 					clauseArray.push("\x1b[93m" + "------" + "\x1b[0m")
 				}
-				clauseArray.push(clause)
+				clauseArray.push(wrapline(clause))
 			}
 		})
 

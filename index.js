@@ -20,6 +20,7 @@ const scrapeData = async (url, articleNumber) => {
 		console.log('Fetching data...')
 		const { data } = await axios.get(url)
 		const $ = cheerio.load(data)
+		const subtitle = $(".banner-text-wrapper")[0].children[0].data
 		const articleContent = $(".description-wrapper p")
 		const clauseArray=[]
 
@@ -37,6 +38,7 @@ const scrapeData = async (url, articleNumber) => {
 
 		console.clear()
 		console.log("\x1b[1;93m" + `Article ${articleNumber}` + "\x1b[0m") //yellow bold
+		console.log("\x1b[0;96m" + subtitle + "\x1b[0m")
 		console.log(clauseArray.join('\n'))
 	} catch (err) {
 		console.log('Error: Request failed with status code ' + err.response.status)

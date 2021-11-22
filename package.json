@@ -6,9 +6,11 @@
   "scripts": {
     "start": "node index"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+	  "webscraping", "scraping", "node", "cli", "constitution", "india"
+  ],
+  "author": "Sudeep Biswas (w3bdev@protonmail.com)",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "*"

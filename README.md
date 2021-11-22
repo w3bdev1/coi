@@ -1,6 +1,8 @@
 # COI
 A NodeJS CLI to read the Constitution of India
 
+![coi_article1](./assets/coi.gif)
+
 ### How to Install
 - Clone the repo: `git clone https://github.com/w3bdev1/coi.git`
 - Change directory into the coi: `cd coi`

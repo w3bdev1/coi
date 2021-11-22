@@ -14,3 +14,9 @@ A NodeJS CLI to read the Constitution of India
 - From terminal run `coi`.
 - It will prompt for an article number.
 - Put the number and hit enter.
+
+### For Developers
+- Clone the repo: `git clone https://github.com/w3bdev1/coi.git`
+- Change directory into the coi: `cd coi`
+- Install node modules:	`npm install`
+- Run: `npm start`
